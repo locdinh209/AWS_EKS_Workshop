@@ -14,3 +14,8 @@
   - Deploy example microservice application
   - Deploy Helm chart to monitor miltiple Kubernetes
   - Role based access control (RBAC) in K8S
+
++ Take note:
+kubectl proxy --port=8080 --address=0.0.0.0 --disable-filter=true & -> public k8s dashboard via proxy
+aws eks get-token --cluster-name eksworkshop-eksctl | jq .  -> get token login dashboard
+/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy -> sub uri connect to dashboard
